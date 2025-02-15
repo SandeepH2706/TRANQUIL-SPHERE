@@ -1,0 +1,116 @@
+/* Reset & Base */
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background-color: #f4f4f4;
+}
+
+/* Navbar */
+nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #1a237e;
+    padding: 15px 30px;
+}
+
+.logo {
+    color: white;
+    font-size: 24px;
+    font-weight: bold;
+}
+
+.nav-buttons {
+    display: flex;
+    gap: 15px;
+}
+a {
+    text-decoration: none;
+}
+.nav-buttons a {
+    background: linear-gradient(135deg, #4a90e2, #1e3c72);
+    padding: 10px 15px;
+    border-radius: 5px;
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    transition: 0.3s ease-in-out;
+}
+
+.nav-buttons a:hover {
+    background: linear-gradient(135deg, #1e3c72, #4a90e2);
+    transform: scale(1.1);
+}
+
+/* Content Sections */
+.content-section {
+    position: relative;
+    text-align: center;
+    padding: 100px 20px;
+    margin: 80px auto;
+    width: 80%;
+    border-radius: 10px;
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.2);
+    color: rgba(255, 255, 255, 0.6);  /* Light text */
+    font-size: 18px;
+    transition: 0.3s ease-in-out;
+}
+
+.content-section h2 {
+    color: white;  /* Heading remains visible */
+    font-size: 28px;
+}
+
+.content-section p {
+    font-size: 18px;
+    transition: 0.3s ease-in-out;
+}
+
+.content-section:hover {
+    color: white; /* Text becomes fully visible on hover */
+}
+
+/* Background Images */
+#meditation {
+    background: url('./assets/meditation.jpg') center/cover no-repeat;
+}
+
+#yoga {
+    background: url('./assets/yoga.jpg') center/cover no-repeat;
+}
+
+#music {
+    background: url('./assets/music.jpg') center/cover no-repeat;
+}
+
+#reverse-counting {
+    background: url('./assets/Reversnum.jpg') center/cover no-repeat;
+}
+
+/* Button Styling */
+.content-section button {
+    padding: 10px 20px;
+    background: #4caf50;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.content-section button:hover {
+    background: #388e3c;
+    transform: scale(1.05);
+}
+
+/* Footer */
+footer {
+    text-align: center;
+    padding: 15px;
+    background: #1a237e;
+    color: white;
+    margin-top: 20px;
+}

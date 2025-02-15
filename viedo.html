@@ -1,0 +1,138 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Know Yourself - Video</title>
+    <style>
+        /* Reset & Base */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: Arial, sans-serif;
+            background: linear-gradient(135deg, #e3f2fd, #90caf9);
+            color: #333;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+
+        /* Navbar */
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #1a237e;
+            padding: 15px 30px;
+            box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+        }
+
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+        }
+
+        .nav-buttons a {
+            background: linear-gradient(135deg, #4a90e2, #1e3c72);
+            padding: 10px 15px;
+            border-radius: 5px;
+            text-decoration: none;
+            color: white;
+            font-size: 16px;
+            transition: 0.3s ease-in-out;
+        }
+
+        .nav-buttons a:hover {
+            background: linear-gradient(135deg, #1e3c72, #4a90e2);
+            transform: scale(1.1);
+        }
+
+        /* Main Content */
+        .main-container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            flex-grow: 1;
+            margin: 50px auto;
+            width: 80%;
+        }
+
+        /* Video Box */
+        .video-box {
+            width: 60%;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 5px 10px rgba(0, 0, 0, 0.3);
+            padding: 20px;
+            text-align: center;
+            transition: 0.3s ease-in-out;
+        }
+
+        .video-box:hover {
+            transform: scale(1.05);
+            background: #e3f2fd;
+        }
+
+        /* Video Frame */
+        .video-box iframe {
+            width: 100%;
+            height: 350px;
+            border-radius: 10px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.2);
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #1a237e;
+            color: white;
+            margin-top: auto;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">TRANQUIL SPHERE</div>
+        <div class="nav-buttons">
+            <a href="index.html">Home</a>
+            <a href="./cunslt.html">Consult</a>
+            <a href="healthcare.html">Health Records</a>
+            <a href="./healthcare.html">Health Support</a>
+            <a href="./kno.html">Know Yourself</a>
+            <a href="./donation.html" class="nav-btn">Donations</a>
+            <a href="#">Sign In</a>
+            <a href="#">Login</a>
+        </div>
+    </nav>
+
+    <!-- Main Section -->
+    <main class="main-container">
+        <div class="video-box">
+            <h2>Know Yourself - Informative Video</h2>
+            <iframe width="560" height="315" src="https://www.youtube.com/embed/inpok4MKVLM" 
+title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+
+            
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Know Yourself | All rights reserved.</p>
+    </footer>
+
+</body>
+</html>

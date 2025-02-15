@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hospital Locator | Tranquil Sphere</title>
+    <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
+    <style>
+        /* General Styling */
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: linear-gradient(to right, #74ebd5, #acb6e5);
+            flex-direction: column;
+        }
+
+        /* Logo Styling */
+        .logo {
+            position: absolute;
+            top: 20px;
+            left: 20px;
+            font-size: 20px;
+            font-weight: bold;
+            color: rgb(22, 20, 20);
+            text-decoration: none;
+            background: rgba(255, 255, 255, 0.2);
+            padding: 10px 15px;
+            border-radius: 8px;
+            transition: background 0.3s ease-in-out;
+        }
+
+        .logo:hover {
+            background: rgba(255, 255, 255, 0.4);
+        }
+
+        .container {
+            text-align: center;
+            background: white;
+            padding: 25px;
+            border-radius: 12px;
+            box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2);
+            width: 650px;
+            transition: transform 0.2s ease-in-out;
+        }
+
+        .container:hover {
+            transform: scale(1.02);
+        }
+
+        h2 {
+            color: #333;
+            margin-bottom: 15px;
+            font-size: 24px;
+        }
+
+        #map {
+            height: 400px;
+            width: 100%;
+            border-radius: 12px;
+            border: 2px solid #ddd;
+            transition: box-shadow 0.3s ease-in-out;
+        }
+
+        #map:hover {
+            box-shadow: 0 0 12px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Search Bar */
+        .search-bar {
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            gap: 10px;
+        }
+
+        .search-bar input {
+            width: 70%;
+            padding: 10px;
+            border: 2px solid #ccc;
+            border-radius: 6px;
+            outline: none;
+        }
+
+        .search-bar button {
+            padding: 10px 15px;
+            background: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 6px;
+            cursor: pointer;
+            transition: background 0.3s ease-in-out;
+        }
+
+        .search-bar button:hover {
+            background: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Logo -->
+    <a href="index.html" class="logo">TRANQUIL SPHERE</a>
+
+    <div class="container">
+        <h2>🏥 Find Best Docters nearby</h2>
+        <div id="map"></div>
+
+        <!-- Search Bar -->
+        <div class="search-bar">
+            <input type="text" id="locationInput" placeholder="Enter a location..." />
+            <button onclick="searchLocation()">Search</button>
+        </div>
+    </div>
+
+    <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
+    <script>
+        let map;
+
+        document.addEventListener("DOMContentLoaded", function() {
+            map = L.map('map').setView([12.9716, 77.5946], 13); // Default to Bangalore
+
+            // Load OpenStreetMap tiles
+            L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+                attribution: '&copy; OpenStreetMap contributors'
+            }).addTo(map);
+
+            // Locate user
+            if (navigator.geolocation) {
+                navigator.geolocation.getCurrentPosition(position => {
+                    const userLocation = [position.coords.latitude, position.coords.longitude];
+                    map.setView(userLocation, 15);
+                    L.marker(userLocation).addTo(map).bindPopup("📍 You are here!").openPopup();
+
+                    // Dummy hospital locations (Replace with real API)
+                    const hospitals = [
+                        { name: "🏥 Apollo Hospital", lat: 12.9352, lng: 77.6245 },
+                        { name: "🏥 Manipal Hospital", lat: 12.9613, lng: 77.6449 },
+                        { name: "🏥 Fortis Hospital", lat: 12.9344, lng: 77.6262 }
+                    ];
+                    
+                    hospitals.forEach(hospital => {
+                        L.marker([hospital.lat, hospital.lng]).addTo(map)
+                            .bindPopup(`<b>${hospital.name}</b>`);
+                    });
+                }, () => alert("Geolocation failed!"));
+            } else {
+                alert("Geolocation not supported");
+            }
+        });
+
+        // Search Functionality
+        function searchLocation() {
+            let location = document.getElementById("locationInput").value;
+            if (location.trim() === "") {
+                alert("Please enter a location");
+                return;
+            }
+
+            // Use OpenStreetMap's Nominatim API to get coordinates
+            fetch(`https://nominatim.openstreetmap.org/search?format=json&q=${location}`)
+                .then(response => response.json())
+                .then(data => {
+                    if (data.length > 0) {
+                        let lat = data[0].lat;
+                        let lon = data[0].lon;
+                        map.setView([lat, lon], 15);
+                        L.marker([lat, lon]).addTo(map)
+                            .bindPopup(`<b>📍 ${location}</b>`).openPopup();
+                    } else {
+                        alert("Location not found! Try again.");
+                    }
+                })
+                .catch(() => alert("Error fetching location data"));
+        }
+    </script>
+
+</body>
+</html>

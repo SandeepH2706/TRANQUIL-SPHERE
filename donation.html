@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donation Page</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
+        }
+        main {
+            flex: 1;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 40px;
+        }
+        .container {
+            width: 80%;
+            display: flex;
+            flex-direction: column;
+            gap: 30px;
+        }
+        .donation-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            gap: 20px;
+        }
+        .donation-box {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            background: white;
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+            width: 300px;
+            text-align: center;
+        }
+        .donation-image img {
+            width: 100%;
+            height: auto;
+            border-radius: 10px;
+        }
+        a {
+    text-decoration: none;
+}
+        .donation-text h2 {
+            margin: 15px 0;
+            font-size: 20px;
+            color: #333;
+        }
+        .donation-text p {
+            font-size: 16px;
+            color: #666;
+        }
+        nav {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            background: #1a237e;
+            padding: 15px 30px;
+        }
+        .logo {
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+        .nav-buttons {
+            display: flex;
+            gap: 15px;
+        }
+        .nav-btn {
+            background: linear-gradient(135deg, #4a90e2, #1e3c72);
+            border: none;
+            padding: 10px 15px;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: 0.3s ease-in-out;
+        }
+        .nav-btn a {
+            color: white;
+            text-decoration: none;
+            font-size: 16px;
+        }
+        .nav-btn:hover {
+            background: linear-gradient(135deg, #1e3c72, #4a90e2);
+            transform: scale(1.05);
+        }
+        footer {
+            text-align: center;
+            padding: 15px;
+            background: #1a237e;
+            color: white;
+        }
+        .donation-box {
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.donation-box:hover {
+    transform: scale(1.05); /* Slight zoom-in effect */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Adds a shadow effect */
+}
+
+    </style>
+</head>
+<body>
+    <!-- Navbar -->
+    <nav>
+        <div class="logo">Donation</div>
+        <div class="nav-buttons">
+            <button class="nav-btn"><a href="./index.html">Home</a></button>
+            <button class="nav-btn"><a href="./donation.html">Donate</a></button>
+            <button class="nav-btn"><a href="#">Contact</a></button>
+        </div>
+    </nav>
+    
+    <!-- Main Content -->
+    <main>
+        <div class="container">
+            <div class="donation-section">
+                <div class="donation-box">
+                    <div class="donation-image">
+                        <img src="./assets/don.jpg" alt="Donation 1">
+                    </div>
+                    <div class="donation-text">
+                        <h2><a href="https://www.smilefoundationindia.org/livelihood/">Support Education</a></h2>
+                        <p>Your donation helps provide quality education for underprivileged children.</p>
+                    </div>
+                </div>
+                <div class="donation-box">
+                    <div class="donation-image">
+                        <img src="./assets/Ndonation.jpg" alt="Donation 2">
+                    </div>
+                    <div class="donation-text">
+                        <h2><a href="https://pmnrf.gov.in/en/online-donation">Nationalised Donation</a></h2>
+
+                    </div>
+                </div>
+                <div class="donation-box">
+                    <div class="donation-image">
+                        <img src="./assets/WHO.jpg" alt="Donation 3">
+                    </div>
+                    <div class="donation-text">
+                        <h2> <a href="https://donate.who.foundation/">World Health Organization (WHO)</a></h2>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2025 Donation Website. All Rights Reserved.</p>
+    </footer>
+</body>
+</html>
