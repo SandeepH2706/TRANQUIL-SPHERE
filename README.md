@@ -39,5 +39,73 @@ Mental well-being is a journey, not a destination. At Tranquil Sphere, we are co
 
 Explore Tranquil Sphere today and embark on your journey to mental well-being!
 
-PPT about TRANQUIL SPHERE is uploaded above
+## Project Structure
+
+```
+TRANQUIL-SPHERE/
+├── README.md                    # Project documentation
+├── package.json                 # Node.js dependencies
+├── package-lock.json           # Locked dependency versions
+├── src/                        # Source code
+│   ├── frontend/               # Frontend application
+│   │   ├── README.md           # Frontend documentation
+│   │   ├── pages/              # HTML pages
+│   │   │   ├── index.html      # Main landing page
+│   │   │   ├── auth/           # Authentication pages
+│   │   │   │   ├── login.html  # Login page
+│   │   │   │   └── sign.html   # Registration page
+│   │   │   ├── healthcare/     # Healthcare pages
+│   │   │   │   ├── healthcare.html
+│   │   │   │   ├── healthsup.html
+│   │   │   │   └── Med.html
+│   │   │   ├── challenges/     # Challenge pages
+│   │   │   │   ├── chalange1.html
+│   │   │   │   ├── chalange2.html
+│   │   │   │   └── chalange3.html
+│   │   │   ├── activities/     # Activity pages
+│   │   │   │   ├── stressmain.html
+│   │   │   │   ├── viedo.html
+│   │   │   │   ├── viedo2.html
+│   │   │   │   └── viedo3.html
+│   │   │   ├── cunslt.html     # Consultation page
+│   │   │   ├── donation.html   # Donation page
+│   │   │   ├── kno.html        # Knowledge page
+│   │   │   ├── map.html        # Map page
+│   │   │   ├── test2.html      # Assessment page
+│   │   │   └── adictioncont.html # Addiction content
+│   │   ├── css/                # Stylesheets
+│   │   │   ├── styles.css      # Main styles
+│   │   │   ├── cunsltstyle.css # Consultation styles
+│   │   │   ├── healthcarestyle.css # Healthcare styles
+│   │   │   ├── healthsupstyle.css # Health support styles
+│   │   │   └── knostyle.css    # Knowledge page styles
+│   │   └── js/                 # JavaScript files
+│   │       └── main.js         # Main JavaScript
+│   └── backend/                # Backend application
+│       ├── README.md           # Backend documentation
+│       ├── app.py              # Python backend
+│       └── server.js           # Node.js server
+├── assets/                     # Media assets
+│   ├── README.md               # Assets documentation
+│   └── images/                 # Image files
+│       ├── medical/            # Medical images
+│       ├── activities/         # Activity images
+│       ├── icons/              # Icons and logos
+│       └── general/            # General images
+└── docs/                       # Documentation
+    └── TRANQUIL SPHERE ppt.pptx # Project presentation
+```
+
+## Getting Started
+
+1. Clone the repository
+2. Install dependencies: `npm install`
+3. For Python backend: `pip install -r requirements.txt`
+4. Start the development server
+
+## Technologies Used
+
+- Frontend: HTML, CSS, JavaScript
+- Backend: Python (Flask/Django), Node.js
+- Assets: Organized image resources
 

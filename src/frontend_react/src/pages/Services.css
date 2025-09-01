@@ -1,0 +1,238 @@
+.services-page {
+  padding: 40px 20px;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.services-hero {
+  text-align: center;
+  margin-bottom: 60px;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #2c3e50 0%, #34495e 100%);
+  border-radius: 20px;
+  color: white;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.services-hero h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: 'Georgia', serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.services-hero p {
+  font-size: 20px;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.services-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+  gap: 30px;
+  margin-bottom: 80px;
+}
+
+.service-card {
+  background: white;
+  border-radius: 20px;
+  padding: 40px 30px;
+  text-align: center;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+  transition: all 0.4s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+  border: 2px solid transparent;
+  position: relative;
+  overflow: hidden;
+}
+
+.service-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -100%;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent, rgba(52, 152, 219, 0.1), transparent);
+  transition: left 0.5s;
+}
+
+.service-card:hover::before {
+  left: 100%;
+}
+
+.service-card:hover {
+  transform: translateY(-10px) scale(1.02);
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.15);
+  border-color: #3498db;
+}
+
+.service-icon {
+  font-size: 48px;
+  margin-bottom: 20px;
+  filter: drop-shadow(2px 2px 4px rgba(0, 0, 0, 0.1));
+}
+
+.service-title {
+  font-size: 24px;
+  font-weight: bold;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-family: 'Georgia', serif;
+}
+
+.service-description {
+  font-size: 16px;
+  color: #5a6c7d;
+  line-height: 1.6;
+  margin-bottom: 25px;
+}
+
+.service-features {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 30px;
+}
+
+.service-features li {
+  font-size: 14px;
+  color: #6c757d;
+  margin-bottom: 8px;
+  padding: 8px 15px;
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  border-radius: 20px;
+  border-left: 4px solid #3498db;
+  transition: all 0.3s ease;
+}
+
+.service-features li:hover {
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  color: white;
+  transform: translateX(5px);
+}
+
+.service-button {
+  background: linear-gradient(135deg, #3498db 0%, #2980b9 100%);
+  color: white;
+  border: none;
+  border-radius: 25px;
+  padding: 12px 30px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+.service-button:hover {
+  background: linear-gradient(135deg, #2980b9 0%, #3498db 100%);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 25px rgba(52, 152, 219, 0.3);
+}
+
+.cta-section {
+  text-align: center;
+  padding: 60px 40px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px;
+  color: white;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.cta-section h2 {
+  font-size: 36px;
+  font-weight: bold;
+  margin-bottom: 16px;
+  font-family: 'Georgia', serif;
+}
+
+.cta-section p {
+  font-size: 18px;
+  opacity: 0.9;
+  margin-bottom: 40px;
+}
+
+.cta-buttons {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.cta-primary,
+.cta-secondary {
+  padding: 15px 35px;
+  border-radius: 30px;
+  font-size: 16px;
+  font-weight: 600;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  border: 2px solid white;
+}
+
+.cta-primary {
+  background: white;
+  color: #667eea;
+}
+
+.cta-primary:hover {
+  background: transparent;
+  color: white;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+}
+
+.cta-secondary {
+  background: transparent;
+  color: white;
+}
+
+.cta-secondary:hover {
+  background: white;
+  color: #667eea;
+  transform: translateY(-3px);
+  box-shadow: 0 10px 30px rgba(255, 255, 255, 0.2);
+}
+
+@media (max-width: 768px) {
+  .services-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+  
+  .service-card {
+    padding: 30px 20px;
+  }
+  
+  .services-hero h1 {
+    font-size: 36px;
+  }
+  
+  .services-hero p {
+    font-size: 18px;
+  }
+  
+  .cta-section {
+    padding: 40px 20px;
+  }
+  
+  .cta-section h2 {
+    font-size: 28px;
+  }
+  
+  .cta-buttons {
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .cta-primary,
+  .cta-secondary {
+    width: 100%;
+    max-width: 250px;
+  }
+}

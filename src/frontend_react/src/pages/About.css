@@ -1,0 +1,135 @@
+.about-page {
+  padding: 40px 20px;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.about-hero {
+  text-align: center;
+  margin-bottom: 60px;
+  padding: 60px 20px;
+  background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+  border-radius: 20px;
+  color: white;
+  box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+}
+
+.about-hero h1 {
+  font-size: 48px;
+  font-weight: bold;
+  margin-bottom: 20px;
+  font-family: 'Georgia', serif;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+}
+
+.about-hero p {
+  font-size: 20px;
+  opacity: 0.9;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.about-content {
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+}
+
+.about-section {
+  background: white;
+  padding: 40px;
+  border-radius: 15px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+}
+
+.about-section h2 {
+  font-size: 32px;
+  color: #2c3e50;
+  margin-bottom: 24px;
+  font-family: 'Georgia', serif;
+  border-bottom: 3px solid #3498db;
+  padding-bottom: 10px;
+  display: inline-block;
+}
+
+.about-section p {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #5a6c7d;
+  margin-bottom: 20px;
+}
+
+.features-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 30px;
+  margin-top: 30px;
+}
+
+.feature {
+  background: linear-gradient(135deg, #f8f9fa 0%, #e9ecef 100%);
+  padding: 30px;
+  border-radius: 12px;
+  text-align: center;
+  border: 2px solid transparent;
+  transition: all 0.3s ease;
+}
+
+.feature:hover {
+  border-color: #3498db;
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(52, 152, 219, 0.15);
+}
+
+.feature h3 {
+  font-size: 20px;
+  color: #2c3e50;
+  margin-bottom: 15px;
+  font-weight: bold;
+}
+
+.feature p {
+  font-size: 16px;
+  color: #6c757d;
+  margin: 0;
+}
+
+.benefits-list {
+  list-style: none;
+  padding: 0;
+  margin-top: 20px;
+}
+
+.benefits-list li {
+  font-size: 18px;
+  line-height: 1.8;
+  color: #5a6c7d;
+  margin-bottom: 15px;
+  padding-left: 10px;
+}
+
+@media (max-width: 768px) {
+  .about-hero h1 {
+    font-size: 36px;
+  }
+  
+  .about-hero p {
+    font-size: 18px;
+  }
+  
+  .about-section {
+    padding: 30px 20px;
+  }
+  
+  .about-section h2 {
+    font-size: 28px;
+  }
+  
+  .features-grid {
+    grid-template-columns: 1fr;
+  }
+  
+  .feature {
+    padding: 20px;
+  }
+}
